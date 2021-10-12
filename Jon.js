@@ -1,0 +1,1 @@
+//Updates function and GitHub host.  All-HTML layout

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Meal Planner</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <H1>Weekly Meal Planner-what is for dinner this week?</H1>
+    <div class="container">
+        <div class="row">
+            <div class="col mt-5 border rounded p-3">
+                <label for="meal-name-input" class="form-label">Meal</label>
+                <input type="text" class="form-control" id="meal-name-input"/>
+                <button type="button" class="btn btn-primary mt-3 w-100" onclick="onAddMeal()">Add</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="meals">
+                <!-- This is where the meals will be rendered -->
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="Billy.js"></script>
+    <script src="Alexa.js"></script>
+    <script src="James.js"></script>
+    <script src="Jon.js"></script>
+    
+</body>
+</html>
