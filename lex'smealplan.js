@@ -1,5 +1,3 @@
-/***** Data *****/
-
 const meals = [];
 
 /***** Event Listeners *****/
@@ -40,8 +38,8 @@ function onDeleteMember(meal, ingredient) {
 function renderApp() {
     const mealsDiv = document.getElementById("meals");
     emptyElement(mealsDiv);
-    for(let meal of meals) {
-        mealsDiv.appendChild( renderMeal(meal) );
+    for (let meal of meals) {
+        mealsDiv.appendChild(renderMeal(meal));
     }
 }
 
@@ -62,7 +60,7 @@ function renderMeal(meal) {
     ingredientNameHeading.appendChild(deleteButton);
 
     // Ingredients Table
-    mealDiv.appendChild( renderIngredientsTable(meal) );
+    mealDiv.appendChild(renderIngredientsTable(meal));
 
     // We return the <div> and it's appended on line 45
     return mealDiv;
@@ -130,8 +128,8 @@ function renderIngredientsTable(meal) {
     addButtonCell.appendChild(addButton);
 
     // Ingredient Rows
-    for(let ingredient of meal.ingredients) {
-        ingredientsTable.firstElementChild.appendChild( renderIngredientRow(meal, ingredient) ) // firstElementChild is grabbing the <tbody>
+    for (let ingredient of meal.ingredients) {
+        ingredientsTable.firstElementChild.appendChild(renderIngredientRow(meal, ingredient)) // firstElementChild is grabbing the <tbody>
     }
 
     return ingredientsTable; // We return the <table> and it's appended on line 66
@@ -148,7 +146,7 @@ function renderIngredientRow(meal, ingredient) {
     const deleteButton = document.createElement("button");
     deleteButton.className = "btn btn-warning";
     deleteButton.textContent = "Delete";
-    deleteButton.addEventListener("click", () => 
+    deleteButton.addEventListener("click", () =>
         onDeleteMember(meal, ingredient)
     );
     ingredientRow.insertCell(2).appendChild(deleteButton)
@@ -159,7 +157,7 @@ function renderIngredientRow(meal, ingredient) {
 /***** Helpers *****/
 
 function emptyElement(element) {
-    while(element.firstChild) {
+    while (element.firstChild) {
         element.removeChild(element.firstChild);
     }
 }
