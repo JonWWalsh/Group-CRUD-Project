@@ -52,12 +52,12 @@
 //     ingredientNameHeading.textContent = recipe.name;
 //     recipeDiv.appendChild(ingredientNameHeading);
 
-//     // Ingredient Name Heading -> Delete Button
-//     const deleteButton = document.createElement("button");
-//     deleteButton.textContent = "Delete Recipe";
-//     deleteButton.className = "btn btn-warning ms-2";
-//     deleteButton.addEventListener("click", () => onDeleteRecipe(recipe));
-//     ingredientNameHeading.appendChild(deleteButton);
+// Ingredient Name Heading -> Delete Button
+const deleteButton = document.createElement("button");
+deleteButton.textContent = "Delete Recipe";
+deleteButton.className = "btn btn-warning ms-2";
+deleteButton.addEventListener("click", () => onDeleteRecipe(recipe));
+ingredientNameHeading.appendChild(deleteButton);
 
 //     // Ingredients Table
 //     recipeDiv.appendChild(renderIngredientsTable(recipe));
