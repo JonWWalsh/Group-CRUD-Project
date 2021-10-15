@@ -162,8 +162,8 @@ function renderIngredientRow(recipe, ingredient) {
 
 /***** Helpers *****/
 
-function emptyElement(element) {
-    while (element.firstChild) {
-        element.removeChild(element.firstChild);
-    }
-}
+// function emptyElement(element) {
+//     while (element.firstChild) {
+//         element.removeChild(element.firstChild);
+//     }
+// }
