@@ -18,7 +18,7 @@ function onAddRecipe() {
 // Render Function
 
 function renderApp() {
-    const recipesDiv = document.getElementById("recipies");
+    const recipesDiv = document.getElementById("recipes");
     emptyElement(recipesDiv);
     for(let recipe of recipes) {
         recipesDiv.appendChild( renderRecipe(recipe));
