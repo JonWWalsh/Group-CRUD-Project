@@ -16,6 +16,10 @@ function onAddRecipe() {
     renderApp();
 }
 
+function formClear(){
+    document.getElementById("recipe-name-input").value = " ";
+}
+
 // Render Function
 
 function renderApp() {

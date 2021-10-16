@@ -10,6 +10,10 @@ function onAddRecipe() {
     renderApp();
 }
 
+function formClear(){
+    document.getElementById("recipe-name-input").value = " ";
+}
+
 function onDeleteRecipe(recipe) {
     const index = recipes.indexOf(recipe);
     recipes.splice(index, 1);
