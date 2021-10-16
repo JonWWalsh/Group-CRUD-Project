@@ -29,7 +29,7 @@ function onDeleteIngredient(recipe, ingredient) {
     let index = recipe.ingredients.indexOf(ingredient);
     recipe.ingredients.splice(index, 1);
     renderApp();
-} //Added the above 3 functions
+} 
 
 // Render Function
 
@@ -48,7 +48,7 @@ function renderRecipe(recipe){
     const ingredientNameHeading = document.createElement("h2");
     ingredientNameHeading.textContent = recipe.name;
     recipeDiv.appendChild(ingredientNameHeading);
-    //Copied Billy's button and inserted here
+    // Billy's code 52-57
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete Recipe";
     deleteButton.className = "btn btn-warning";
@@ -58,7 +58,7 @@ function renderRecipe(recipe){
 
     return recipeDiv;
 }
-//This entire function is from Lex's original code.  I'm sure there's a much easier way to generate the table, most likely by defining it in bootstrap and referencing it with a little JS.
+//Jame's code.
 function renderIngredientsTable(recipe) {
     const ingredientsTable = document.createElement("table");
     ingredientsTable.className = "table table-dark table-striped";
@@ -116,35 +116,8 @@ function renderIngredientsTable(recipe) {
 
     return ingredientsTable;
 }
-//James' code
-// let id = 0;
 
-// document.getElementById('add').addEventListener('click', () => {
-//     let table = document.getElementById('list');
-//     let row = table.insertRow(1);
-//     row.setAttribute('id', `item-${id}`);
-//     row.insertCell(0).innerHTML = document.getElementById('ingredient').value;
-//     row.insertCell(1).innerHTML = document.getElementById('amount').value;
-//     let actions = row.insertCell(2);
-//     actions.appendChild(createDeleteButton(id++)); 
-// })
-
-
-// function createDeleteButton(id) {
-//     let btn = document.createElement('button');
-//     btn.className = 'btn btn-primary';
-//     btn.id = id;
-//     btn.innerHTML = 'Remove';
-//     btn.onclick = () => {
-//         let elementToDelete = document.getElementById(`item-${id}`)
-//         elementToDelete.parentNode.removeChild(elementToDelete);
-//     };
-//     return btn;
-// }
-
-
-
-//Billy's code 144-158
+//Billy's code 122-135
 function renderIngredientRow(recipe, ingredient) {
     const ingredientRow = document.createElement("tr");
 
@@ -161,7 +134,7 @@ function renderIngredientRow(recipe, ingredient) {
     );
     ingredientRow.insertCell(2).appendChild(deleteButton)
 
-    //Jon's code 161-178
+    //Jon's code 138-155
 const list = document.getElementById("recipes");
 const editButton = document.createElement("button");
 editButton.textContent = "Edit";
@@ -187,4 +160,3 @@ function emptyElement(element) {
         element.removeChild(element.firstChild);
     }
 }
-//We still need a function to clear the input field for recipes
